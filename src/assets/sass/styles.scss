@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'NotoKufiArabic';
+    src: url('../fonts/NotoKufiArabic-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'NotoKufiArabic';
+    src: url('../fonts/NotoKufiArabic-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+  body {
+    font-family: 'NotoKufiArabic', sans-serif;
+  }
+  body {
+    font-family: 'NotoKufiArabic', sans-serif;
+    font-weight: normal; /* يستخدم الخط بالحجم العادي */
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: bold; /* يستخدم الخط بالحجم العريض */
+  }
+  
