@@ -11,8 +11,11 @@
   "license": "ISC",
   "devDependencies": {
     "css-loader": "^5.0.0",
+    "css-minimizer-webpack-plugin": "^7.0.0",
     "file-loader": "^6.2.0",
+    "html-loader": "^5.0.0",
     "html-webpack-plugin": "^5.6.0",
+    "mini-css-extract-plugin": "^2.9.0",
     "sass": "^1.32.0",
     "sass-loader": "^10.0.0",
     "style-loader": "^2.0.0",
@@ -21,6 +24,7 @@
     "webpack-dev-server": "^4.15.2"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.5.2",
     "bootstrap": "^5.0.0",
     "jquery": "^3.5.1"
   }

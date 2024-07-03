@@ -1,49 +1,88 @@
-const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const path = require('path');
 
 module.exports = {
-  mode: 'development', // يمكنك تغييره إلى 'production' للإنتاج
-  entry: './src/index.js',
+  mode: 'development',
+  entry: {
+    app: './src/index.js',
+  },
   output: {
-    filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
-    clean: true,
+    filename: 'bundle.js',
+  },
+  devServer: {
+    static: {
+      directory: path.join(__dirname, 'public'),
+    },
+    hot: false,
+    port: 9000,
+    open: true,
+    devMiddleware: {
+      writeToDisk: true,
+    }
   },
   module: {
     rules: [
       {
-        test: /\.scss$/,
+        test: /\.html$/i,
+        loader: "html-loader",
+        options: {
+          minimize: true,
+        },
+      },
+      {
+        test: /\.(sa|sc|c)ss$/,
+        exclude: /bootstrap\.min\.css$/i,
         use: [
-          'style-loader',
-          'css-loader',
-          'sass-loader',
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              esModule: false,
+            },
+          },
+          "css-loader",
+          "sass-loader"
         ],
       },
       {
-        test: /\.css$/,
+        test: /bootstrap\.min\.css$/i,
         use: [
-          'style-loader',
-          'css-loader',
-        ],
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              esModule: false,
+            },
+          },
+          'rtlcss-loader'
+        ]
       },
       {
-        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
+        generator: {
+          filename: "./images/[name][ext]"
+        }
+      },
+      {
+        test: /\.(svg|eot|woff|woff2|ttf)$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: "./fonts/[name][ext]"
+        }
       },
     ],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html',
-      filename: 'index.html',
+      filename: "index.html",
+      template: "./src/index.html",
+      inject: 'body',  // Ensure the script tag is inserted at the end of the body
     }),
-  ],
-  devServer: {
-    static: {
-      directory: path.join(__dirname, 'dist'),
-    },
-    compress: true,
-    port: 9000,
-    open: true,
-  },
+    new MiniCssExtractPlugin({
+      filename: "css/style.css"
+    }),
+    new CssMinimizerPlugin()
+  ]
 };

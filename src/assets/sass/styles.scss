@@ -23,4 +23,57 @@
   h1, h2, h3, h4, h5, h6 {
     font-weight: bold; /* يستخدم الخط بالحجم العريض */
   }
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-brand img {
+    margin-right: 10px; // مسافة صغيرة بين الشعار والنص
+  }
+  
+  .navbar-brand span {
+    font-size: 1.5rem; // حجم النص
+    font-weight: bold; // جعل النص عريض
+  }
+  
+  .chip {
+    display: inline-block;
+    padding: 0.25rem 0.5rem; // تصغير حجم الشارة
+    border-radius: 15px; // تعديل الإطار الدائري
+    background-color: #007bff;
+    color: white;
+    font-size: 0.75rem; // تصغير حجم الخط
+    position: relative; // لتمكين التمركز بالنسبة للرابط
+    top: -10px; // تحريك الشارة إلى الأعلى
+    left: -10px; // تحريك الشارة إلى اليسار
+    margin-right: 0.5rem;
+  }
+  .navbar-nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .navbar-nav .nav-item {
+    margin: 5px; /* أضف مسافة صغيرة بين العناصر */
+  }
+  
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+  
+  .navbar-brand img {
+    margin-right: 10px; /* مسافة صغيرة بين الشعار والنص */
+  }
+  
+  .chip {
+    font-size: 0.8rem; /* حجم النص */
+    font-weight: bold; /* جعل النص عريض */
+    margin-left: auto; /* ضعها في أقصى اليسار */
+    margin-top: 10px; /* مسافة من الأعلى */
+    display: inline-block;
+  }
   

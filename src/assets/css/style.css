@@ -1,0 +1,106 @@
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .bg-body-tertiary {
+    border-bottom:3px solid #007bff ;
+}
+  .nav-item {
+    position: relative;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  
+  .chip {
+    display: inline-block;
+    padding: 0.25rem 0.5rem; 
+    border-radius: 15px; 
+    background-color: #007bff;
+    color: white;
+    font-size: 0.75rem; 
+    position: absolute; 
+    top: -25px; 
+    left: 30%; 
+    transform: translateX(-50%); 
+  }
+  .btn-login {
+    color: #007bff; /* تغيير اللون حسب رغبتك */
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+    margin-right: 10px;
+    text-decoration: none;
+    transition: all 0.3 ease;
+  }
+  
+  .btn-login:hover {
+    color: #004794; /* تغيير اللون حسب رغبتك */
+  }
+  
+  .btn-new-account {
+    color: white;
+    background-color: #007bff; /* تغيير اللون حسب رغبتك */
+    border: none;
+    border-radius: 0;
+    font-size: 18px;
+    padding: 8px 16px;
+    transition: all 0.3 ease;
+  }
+  
+  .btn-new-account:hover {
+    background-color: #004794; 
+    color: white;
+
+  }
+
+  
+  .btns-space-around {
+        display: flex!important;
+        justify-content: space-around;
+  }
+
+  
+.carousel .carousel-item img {
+    height: 500px;
+    object-fit: cover;
+    
+}
+
+ .carousel .carousel-item .overlay {
+    position: absolute;
+    background-color:rgba(0, 123, 255, 0.233);
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    display: flex !important;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1
+}
+.fa-2xl {
+    font-size: 4em !important;
+
+}
+.carousel .carousel-caption h1 {
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 50px
+}
+
+.carousel .carousel-caption h4 {
+    width: 60%;
+    color: #eee
+}
+ .carousel .carousel-indicators button {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 20px 5px 0px 0px
+}
+
+ .carousel .carousel-indicators button.active {
+    background-color: #007bff
+}
