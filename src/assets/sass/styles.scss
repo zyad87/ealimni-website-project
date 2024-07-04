@@ -76,4 +76,630 @@
     margin-top: 10px; /* مسافة من الأعلى */
     display: inline-block;
   }
-  
+  // src/styles/main.scss
+
+// استيراد ملف المتغيرات
+// src/styles/main.scss
+
+// استيراد ملف المتغيرات
+// src/styles/main.scss
+
+// استيراد ملف المتغيرات
+// src/styles/main.scss
+
+// استيراد ملف المتغيرات
+@import 'variables';
+
+// استخدام المتغيرات في الأنماط
+body {
+  background-color: $background-color;
+  color: $text-color;
+}
+
+.header {
+  background-color: $primary-color;
+  color: $background-color;
+}
+
+.button {
+  background-color: $accent-color;
+  color: $background-color;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: lighten($accent-color, 10%);
+  }
+}
+
+// مركز المحتوى في الشريحة
+.slide-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%; // تأكد من أن الحاوية تأخذ كامل الارتفاع
+  text-align: center; // لزيادة التوسيط النصي
+}
+
+// أنماط قسم نشاطاتنا
+.activities-section {
+  background-color: #f8f9fa;
+
+  .section-title {
+    color: $text-color;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .activity-card {
+    background-color: $background-color;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-body {
+      color: $text-color;
+      padding: 1.5rem;
+
+      .card-title {
+        display: inline-block;
+        color: #3498db;
+        background: #c2e5ff;
+        padding: 10px 20px;
+        text-align: center;
+        margin-top: 20px;
+        border-radius: 60px;
+        font-size: 1.25rem;
+        font-weight: bold;
+      }
+
+      .card-text {
+        font-size: 1rem;
+        margin-top: 1rem;
+        color: #555;
+      }
+    }
+
+    .card-img-top {
+      margin-top: 20px;
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+    }
+  }
+}
+
+// ضبط الاتجاه للبنود الزوجية
+.activity-col:nth-child(even) {
+  direction: ltr;
+  text-align: left;
+
+  .card {
+    margin-left: auto;
+  }
+}
+.students-section {
+  background-color: #f8f9fa;
+
+  .section-title {
+    color: $text-color;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .student-card {
+    background-color: $background-color;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-body {
+      color: $text-color;
+      padding: 1.5rem;
+
+      .card-title {
+        display: inline-block;
+        color: #3498db;
+        background: #c2e5ff;
+        padding: 10px 20px;
+        text-align: center;
+        margin-top: 20px;
+        border-radius: 60px;
+        font-size: 1.25rem;
+        font-weight: bold;
+      }
+
+      .card-text {
+        font-size: 1rem;
+        margin-top: 1rem;
+        color: #555;
+      }
+    }
+
+    .card-img-top {
+      margin-top: 20px;
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+    }
+  }
+}
+
+// تحسين وضوح أسهم التنقل في الـ Carousel
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: $primary-color;
+  border-radius: 50%;
+  padding: 10px;
+
+  &::before {
+    content: none; // إزالة الرمز الافتراضي
+  }
+
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
+}
+
+// تخصيص محتوى الأسهم
+.carousel-control-prev::after {
+  content: '\f053'; // رمز السهم من FontAwesome
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  color: $background-color;
+  font-size: 1.5rem;
+}
+
+.carousel-control-next::after {
+  content: '\f054'; // رمز السهم من FontAwesome
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  color: $background-color;
+  font-size: 1.5rem;
+}
+
+// src/styles/main.scss
+
+// استيراد ملف المتغيرات
+@import 'variables';
+
+// استخدام المتغيرات في الأنماط
+body {
+  background-color: $background-color;
+  color: $text-color;
+}
+
+.header {
+  background-color: $primary-color;
+  color: $background-color;
+}
+
+.button {
+  background-color: $accent-color;
+  color: $background-color;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: lighten($accent-color, 10%);
+  }
+}
+
+// مركز المحتوى في الشريحة
+.slide-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%; // تأكد من أن الحاوية تأخذ كامل الارتفاع
+  text-align: center; // لزيادة التوسيط النصي
+}
+
+// أنماط قسم نشاطاتنا
+.activities-section {
+  background-color: #f8f9fa;
+
+  .section-title {
+    color: $text-color;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .activity-card {
+    background-color: $background-color;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-body {
+      color: $text-color;
+      padding: 1.5rem;
+
+      .card-title {
+        display: inline-block;
+        color: #3498db;
+        background: #c2e5ff;
+        padding: 10px 20px;
+        text-align: center;
+        margin-top: 20px;
+        border-radius: 60px;
+        font-size: 1.25rem;
+        font-weight: bold;
+      }
+
+      .card-text {
+        font-size: 1rem;
+        margin-top: 1rem;
+        color: #555;
+      }
+    }
+
+    .card-img-top {
+      margin-top: 20px;
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+    }
+  }
+}
+
+// أنماط قسم طلابنا
+.students-carousel-section {
+  background-color: #f8f9fa;
+
+  .section-title {
+    color: $text-color;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .student-card {
+    background-color: $background-color;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    max-width: 300px; // تقصير عرض الكرت
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-body {
+      color: $text-color;
+      padding: 1.5rem;
+      position: relative;
+
+      .card-title {
+        display: inline-block;
+        color: #3498db;
+        background: #c2e5ff;
+        padding: 10px 20px;
+        text-align: center;
+        margin-top: 20px;
+        border-radius: 60px;
+        font-size: 1.25rem;
+        font-weight: bold;
+      }
+
+      .card-text {
+        font-size: 1rem;
+        margin-top: 1rem;
+        color: #555;
+      }
+    }
+
+    .card-img-top {
+      margin-top: 20px;
+      width: 150px; // زيادة حجم الصورة
+      height: 150px; // زيادة حجم الصورة
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+
+// تحسين وضوح أسهم التنقل في الـ Carousel
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: $primary-color;
+  border-radius: 50%;
+  padding: 20px;
+
+
+
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
+}
+
+// تخصيص محتوى الأسهم
+.carousel-control-prev::after {
+  font-weight: 900;
+  color: $background-color;
+  font-size: 1.5rem;
+}
+
+.carousel-control-next::after {
+  font-weight: 900;
+  color: $background-color;
+  font-size: 1.5rem;
+}
+
+// أنماط قسم نجوم المدرسة
+.top-students-section {
+  background-color: #f8f9fa;
+  padding: 3rem 0;
+
+  .section-title {
+    color: $text-color;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .top-student-card {
+    background-color: $background-color;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+    max-width: 300px; // تقصير عرض الكرت
+    margin: 0 auto; // توسيط الكرت
+
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-body {
+      color: $text-color;
+      padding: 1.5rem;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center; // لضمان التوسيط
+
+      .card-title {
+        display: inline-block;
+        color: #3498db;
+        background: #c2e5ff;
+        padding: 10px 20px;
+        text-align: center;
+        margin-top: 20px;
+        border-radius: 60px;
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+
+      .card-text {
+        font-size: 1rem;
+        margin-top: 1rem;
+        color: #555;
+
+        .first-place-icon {
+          font-size: 1.5rem;
+          color: #ffd700; // لون ذهبي
+          margin-left: 5px; // لإضافة بعض المسافة بين النص والأيقونة
+        }
+
+        .second-place-icon {
+          font-size: 1.5rem;
+          color: #c0c0c0; // لون فضي
+          margin-left: 5px; // لإضافة بعض المسافة بين النص والأيقونة
+        }
+      }
+
+      .btn-primary {
+        background-color: $primary-color;
+        border: none;
+        padding: 10px 20px;
+        font-size: 1rem;
+        margin-top: 1rem;
+        cursor: pointer;
+
+        &:hover {
+          background-color: darken($primary-color, 10%);
+        }
+      }
+    }
+
+    .card-img-top {
+      margin-top: 20px;
+      width: 150px; // زيادة حجم الصورة
+      height: 150px; // زيادة حجم الصورة
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  .first-place {
+    border: 2px solid #ffd700; // حافة ذهبية
+    .card-title {
+      background: #ffd700; // خلفية ذهبية
+      color: #fff; // لون النص أبيض
+    }
+  }
+
+  .second-place {
+    border: 2px solid #c0c0c0; // حافة فضية
+    .card-title {
+      background: #c0c0c0; // خلفية فضية
+      color: #fff; // لون النص أبيض
+    }
+  }
+}
+
+
+// أنماط قسم تواصل معنا
+.contact-us-section {
+  background-color: #f8f9fa;
+  padding: 3rem 0;
+
+  .section-title {
+    color: $text-color;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .contact-info {
+    background-color: $background-color;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+
+    h4 {
+      color: $text-color;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 0.5rem;
+
+      i {
+        color: $primary-color;
+        margin-right: 0.5rem;
+      }
+    }
+  }
+
+  .contact-form {
+    background-color: $background-color;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    h4 {
+      color: $text-color;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .form-label {
+      color: $text-color;
+    }
+
+    .form-control {
+      border-radius: 5px;
+    }
+
+    .btn-primary {
+      background-color: $primary-color;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1rem;
+      margin-top: 1rem;
+      cursor: pointer;
+
+      &:hover {
+        background-color: darken($primary-color, 10%);
+      }
+    }
+
+    .invalid-feedback {
+      color: $accent-color;
+    }
+  }
+
+  .map-container {
+    iframe {
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 100%; // ضبط العرض ليكون متجاوب
+      height: 660px; // ارتفاع متناسق
+    }
+    @media only screen and (max-width: 700px) {
+      iframe {
+
+        height: 460px; // ارتفاع متناسق
+      }
+    }
+  }
+}
+
+
+// أنماط الفوتر
+.footer-section {
+  background-color: $primary-color;
+  color: $background-color;
+  padding: 2rem 0;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  h5 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .social-icons {
+    a {
+      color: $background-color;
+      font-size: 1.25rem;
+      margin-right: 0.5rem;
+      padding: 1px 10px;
+      border-radius: 20px;
+      transition: all 0.5s ease;
+
+      &:hover {
+        color:#007bff;
+        background-color: #fff;
+      }
+    }
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  .mt-4 {
+    margin-top: 2rem;
+  }
+
+  .mb-4 {
+    margin-bottom: 1.5rem;
+  }
+}

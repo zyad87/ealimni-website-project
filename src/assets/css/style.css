@@ -40,19 +40,20 @@
   
   .btn-new-account {
     color: white;
-    background-color: #007bff; /* تغيير اللون حسب رغبتك */
+    background-color: #007bff !important; /* تغيير اللون حسب رغبتك */
     border: none;
     border-radius: 0;
     font-size: 18px;
     padding: 8px 16px;
     transition: all 0.3 ease;
   }
-  
-  .btn-new-account:hover {
-    background-color: #004794; 
-    color: white;
 
+
+  .btn-new-account:hover {
+    background-color: #004794 !important; 
+    color: white !important;
   }
+
 
   
   .btns-space-around {
@@ -69,7 +70,7 @@
 
  .carousel .carousel-item .overlay {
     position: absolute;
-    background-color:rgba(0, 123, 255, 0.233);
+    background-color:rgba(52, 152, 219, 0.463);
     top: 0;
     right: 0;
     height: 100%;
@@ -104,3 +105,5 @@
  .carousel .carousel-indicators button.active {
     background-color: #007bff
 }
+
+
