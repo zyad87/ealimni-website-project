@@ -80,6 +80,16 @@ module.exports = {
       template: "./src/index.html",
       inject: 'body',  // Ensure the script tag is inserted at the end of the body
     }),
+    new HtmlWebpackPlugin({
+      filename: "student1-profile.html",
+      template: "./src/student1-profile.html",
+      inject: 'body',  // Ensure the script tag is inserted at the end of the body
+    }),  
+      new HtmlWebpackPlugin({
+      filename: "student2-profile.html",
+      template: "./src/student2-profile.html",
+      inject: 'body',  // Ensure the script tag is inserted at the end of the body
+    }),
     new MiniCssExtractPlugin({
       filename: "css/style.css"
     }),

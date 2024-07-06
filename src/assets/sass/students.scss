@@ -1,0 +1,52 @@
+// students.scss
+
+@import 'variables';
+.student-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .student-info img {
+    max-width: 300px; /* ضبط حجم الصورة */
+    height: auto;
+    margin: 10px;
+    border-radius: 10px;
+  }
+  
+  .student-info div {
+    max-width: 60%; /* جعل النص يأخذ مساحة أقل */
+  }
+  
+  .student-info p {
+    margin: 5px 0;
+  }
+  
+// أنماط الطالب 1
+.student1-page {
+  .header {
+    background-color: $student1-primary-color;
+  }
+  .student-overview-section, .student-grades-section, .student-tips-section {
+    border: 1px solid $student1-secondary-color;
+    background-color: lighten($student1-primary-color, 40%);
+  }
+  .section-title {
+    color: $student1-secondary-color;
+  }
+}
+
+// أنماط الطالب 2
+.student2-page {
+  .header {
+    background-color: $student2-primary-color;
+  }
+  .student-overview-section, .student-grades-section, .student-tips-section {
+    border: 1px solid $student2-secondary-color;
+    background-color: lighten($student2-primary-color, 40%);
+  }
+  .section-title {
+    color: $student2-secondary-color;
+  }
+}

@@ -1,3 +1,8 @@
+
+@import 'variables';
+@import 'students';
+
+
 @font-face {
     font-family: 'NotoKufiArabic';
     src: url('../fonts/NotoKufiArabic-Medium.ttf') format('truetype');
@@ -257,22 +262,7 @@ body {
   }
 }
 
-// تخصيص محتوى الأسهم
-.carousel-control-prev::after {
-  content: '\f053'; // رمز السهم من FontAwesome
-  font-family: 'Font Awesome 5 Free';
-  font-weight: 900;
-  color: $background-color;
-  font-size: 1.5rem;
-}
 
-.carousel-control-next::after {
-  content: '\f054'; // رمز السهم من FontAwesome
-  font-family: 'Font Awesome 5 Free';
-  font-weight: 900;
-  color: $background-color;
-  font-size: 1.5rem;
-}
 
 // src/styles/main.scss
 
@@ -701,5 +691,102 @@ body {
 
   .mb-4 {
     margin-bottom: 1.5rem;
+  }
+}
+
+// src/styles/student.scss
+
+// المتغيرات
+
+$highlight-color: #e67e22;
+
+// تنسيقات عامة
+body {
+  background-color: $background-color;
+  color: $text-color;
+  font-family: 'Arial', sans-serif;
+}
+
+.header {
+  background-color: $primary-color;
+  color: #fff;
+  padding: 1.5rem 0;
+  text-align: center;
+
+  h1 {
+    margin: 0;
+    font-size: 2rem;
+  }
+}
+
+.section-title {
+  color: $primary-color;
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+// قسم لمحة عامة
+.student-overview-section {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  .student-info {
+    p {
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+      strong {
+        color: $highlight-color;
+      }
+    }
+  }
+}
+
+// قسم علامات الطالب
+.student-grades-section {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+
+    th, td {
+      padding: 0.75rem;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: $primary-color;
+      color: #fff;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+  }
+}
+
+// قسم النصائح
+.student-tips-section {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  .tips {
+    p {
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+
+      &:before {
+        content: '• ';
+        color: $highlight-color;
+      }
+    }
   }
 }
