@@ -1,3 +1,4 @@
+
 // students.scss
 
 @import 'variables';
@@ -29,11 +30,14 @@
     background-color: $student1-primary-color;
   }
   .student-overview-section, .student-grades-section, .student-tips-section {
-    border: 1px solid $student1-secondary-color;
-    background-color: lighten($student1-primary-color, 40%);
+    background-color: lighten($student1-primary-color, 50%);
   }
   .section-title {
     color: $student1-secondary-color;
+  }
+  th {
+    background-color: $student1-secondary-color;
+    color: #fff;
   }
 }
 
@@ -43,10 +47,16 @@
     background-color: $student2-primary-color;
   }
   .student-overview-section, .student-grades-section, .student-tips-section {
-    border: 1px solid $student2-secondary-color;
-    background-color: lighten($student2-primary-color, 40%);
+    background-color: lighten($student2-primary-color, 50%);
   }
   .section-title {
     color: $student2-secondary-color;
   }
+  th {
+    background-color: $student2-secondary-color;
+    color: #fff;
+  }
 }
+
+
+

@@ -1,90 +1,219 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="لمحة عامة حول الطالب المتفوق، علاماته، والنصائح لكي تصبح متفوقًا.">
-  <meta name="keywords" content="طالب متفوق, علامات, نصائح">
-  <meta name="author" content="مدرسة علمني">
-  <title>الطالب المتفوق - فاطمة علي</title>
-</head>
-<body class="student1-page">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="لمحة عامة حول الطالب المتفوق، علاماته، والنصائح لكي تصبح متفوقًا."
+    />
+    <meta name="keywords" content="طالب متفوق, علامات, نصائح" />
+    <meta name="author" content="مدرسة علمني" />
+    <link
+      rel="icon"
+      type="image/jpg"
+      href="./assets/images/noun-school-3652203.png"
+    />
+    <title>الطالب المتفوق - إبراهيم محمد</title>
+  </head>
+  <body class="student2-page">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="./index.html">
+          <img
+            src="./assets/images/noun-school-3652203.png"
+            alt="Logo"
+            width="80"
+            height="80"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="./index.html"
+              >
+                الرئيسية</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html#activities">نشاطاتنا</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html#students-carousel"
+                >طلابنا</a
+              >
+            </li>
+            <li class="nav-item">
+              <span class="badge bg-primary chip d-none d-lg-inline-block">
+                المتفوقون <i class="fas fa-star"></i
+              ></span>
+              <a class="nav-link" href="./index.html#top-students"
+                >نجوم المدرسة</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html#contact-us">تواصل معنا</a>
+            </li>
+          </ul>
+          <div class="d-flex ms-auto btns-space-around">
+            <a class="btn btn-login me-3" href="./login.html">تسجيل الدخول</a>
+            <a class="btn btn-new-account btn-primary" href="./signup.html"
+              >حساب جديد</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+    <header class="header">
+      <div class="container">
+        <h2>الطالب المتفوق - إبراهيم محمد</h2>
+        <p class="first-place-text pt-3">
+          المرتبة الثانية
+          <span class="first-place-icon"><i class="fas fa-medal"></i></span>
+        </p>
+      </div>
+    </header>
 
-<header class="header">
-  <div class="container">
-    <h1>الطالب المتفوق - فاطمة علي</h1>
-  </div>
-</header>
+    <section id="student-overview" class="student-overview-section py-5">
+      <div class="container">
+        <h2 class="section-title mb-4">لمحة عامة</h2>
+        <div class="student-info">
+          <div>
+            <p><strong>الاسم:</strong> إبراهيم محمد</p>
+            <p><strong>الكنية:</strong> السالم</p>
+            <p><strong>الصف:</strong> الصف العاشر</p>
+            <p><strong>العمر:</strong> 15 عامًا</p>
+            <p><strong>الهوايات:</strong> البرمجة، الموسيقى، كرة القدم</p>
+          </div>
+          <img
+            src="./assets/images/students/students2.jpg"
+            alt="إبراهيم محمد"
+            class="student-img"
+          />
+        </div>
+      </div>
+    </section>
 
-<section id="student-overview" class="student-overview-section py-5">
-  <div class="container">
-    <h2 class="section-title mb-4">لمحة عامة</h2>
-    <div class="student-info">
-      <p><strong>الاسم:</strong> فاطمة علي</p>
-      <p><strong>الكنية:</strong> العلي</p>
-      <p><strong>الصف:</strong> الصف التاسع</p>
-      <p><strong>العمر:</strong> 15 عامًا</p>
-      <p><strong>الهوايات:</strong> القراءة، الرسم، الرياضة</p>
-    </div>
-  </div>
-</section>
+    <section id="student-grades" class="student-grades-section py-5">
+      <div class="container">
+        <h2 class="section-title mb-4">علامات الطالب</h2>
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>المادة التعليمية</th>
+              <th>العلامة</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>الرياضيات</td>
+              <td>95</td>
+            </tr>
+            <tr>
+              <td>العلوم</td>
+              <td>92</td>
+            </tr>
+            <tr>
+              <td>اللغة العربية</td>
+              <td>98</td>
+            </tr>
+            <tr>
+              <td>اللغة الإنجليزية</td>
+              <td>90</td>
+            </tr>
+            <tr>
+              <td>التاريخ</td>
+              <td>93</td>
+            </tr>
+            <tr>
+              <td>الجغرافيا</td>
+              <td>91</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
 
-<section id="student-grades" class="student-grades-section py-5">
-  <div class="container">
-    <h2 class="section-title mb-4">علامات الطالب</h2>
-    <table class="table">
-      <thead>
-        <tr>
-          <th>المادة التعليمية</th>
-          <th>العلامة</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>الرياضيات</td>
-          <td>95</td>
-        </tr>
-        <tr>
-          <td>العلوم</td>
-          <td>92</td>
-        </tr>
-        <tr>
-          <td>اللغة العربية</td>
-          <td>98</td>
-        </tr>
-        <tr>
-          <td>اللغة الإنجليزية</td>
-          <td>90</td>
-        </tr>
-        <tr>
-          <td>التاريخ</td>
-          <td>93</td>
-        </tr>
-        <tr>
-          <td>الجغرافيا</td>
-          <td>91</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</section>
-
-<section id="student-tips" class="student-tips-section py-5">
-  <div class="container">
-    <h2 class="section-title mb-4">نصائح لكي تُصبح متفوقًا</h2>
-    <div class="tips">
-      <p>1. نظم وقتك بشكل جيد بين الدراسة والهوايات.</p>
-      <p>2. اهتم بصحتك ونمط حياتك الصحي.</p>
-      <p>3. لا تتردد في طلب المساعدة من المعلمين أو الأصدقاء.</p>
-      <p>4. شارك في الأنشطة المدرسية واللامنهجية.</p>
-      <p>5. احرص على مراجعة دروسك بانتظام.</p>
-      <p>6. ابحث دائمًا عن مصادر تعليمية إضافية لتوسيع معرفتك.</p>
-    </div>
-  </div>
-</section>
-
-</body>
+    <section id="student-tips" class="student-tips-section py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-sm-12">
+            <h2 class="section-title mb-4">نصائح لكي تُصبح متفوقًا</h2>
+            <div class="tips">
+              <p>1. نظم وقتك بشكل جيد بين الدراسة والهوايات.</p>
+              <p>2. اهتم بصحتك ونمط حياتك الصحي.</p>
+              <p>3. لا تتردد في طلب المساعدة من المعلمين أو الأصدقاء.</p>
+              <p>4. شارك في الأنشطة المدرسية واللامنهجية.</p>
+              <p>5. احرص على مراجعة دروسك بانتظام.</p>
+              <p>6. ابحث دائمًا عن مصادر تعليمية إضافية لتوسيع معرفتك.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-12">
+            <img
+              src="./assets/images/tr.png"
+              alt="نصائح للطلاب"
+              class="img-fluid"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer-section py-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 mb-4 mb-md-0">
+            <h5>معلومات عنا</h5>
+            <p>
+              نحن مدرسة متميزة تهدف إلى تقديم أفضل الخدمات التعليمية للطلاب
+              وتنمية مهاراتهم.
+            </p>
+          </div>
+          <div class="col-md-4 mb-4 mb-md-0">
+            <h5>تواصل معنا</h5>
+            <p><i class="fas fa-phone-alt"></i> الهاتف: +123 456 7890</p>
+            <p>
+              <i class="fas fa-envelope"></i> البريد الإلكتروني: info@school.com
+            </p>
+            <p>
+              <i class="fas fa-map-marker-alt"></i> العنوان: حي الروضة، جدة
+              المملكة العربية السعودية
+            </p>
+          </div>
+          <div class="col-md-4">
+            <h5>تابعنا</h5>
+            <div class="social-icons">
+              <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-icon"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="social-icon"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col-12 text-center">
+            <p>
+              &copy; <span id="fullYear"></span> مدرسة علمني جميع الحقوق محفوظة
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
-
-
-

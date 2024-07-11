@@ -1,26 +1,35 @@
-// _variables.scss
 
-// ألوان عامة
-$default-color: #e74c3c;
-// _variables.scss
-
-// الألوان الأساسية
-$primary-color: #3498db;
-$secondary-color: #eee;
-$accent-color: #e74c3c;
-$background-color:#eff9ff;
+// الألوان
+$primary-color: #007bff;
+$secondary-color: #004794;
+$white-color: #fff;
+$background-color: #f0f7ff;
+$accent-color: #eee;
 $text-color: #2c3e50;
-
-// ألوان إضافية يمكن استخدامها عند الحاجة
-$info-color: #3498db;
-$success-color: #2ecc71;
-$warning-color: #f1c40f;
-$danger-color: #e74c3c;
+$highlight-color: #e67e22;
 
 // ألوان الطالب 1
-$student1-primary-color: #1abc9c;
-$student1-secondary-color: #16a085;
+$student1-primary-color: #ff245d;
+$student1-secondary-color: #d70040;
 
 // ألوان الطالب 2
-$student2-primary-color: #9b59b6;
-$student2-secondary-color: #8e44ad;
+$student2-primary-color: #1acd81;
+$student2-secondary-color: #126945;
+// الميكسينات
+
+
+@mixin btn-styles($bg-color, $text-color) {
+  color: $text-color;
+  background-color: $bg-color;
+  border: none;
+  font-size: 18px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+
+@mixin box-shadow {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+

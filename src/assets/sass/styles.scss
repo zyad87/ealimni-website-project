@@ -81,25 +81,6 @@
     margin-top: 10px; /* مسافة من الأعلى */
     display: inline-block;
   }
-  // src/styles/main.scss
-
-// استيراد ملف المتغيرات
-// src/styles/main.scss
-
-// استيراد ملف المتغيرات
-// src/styles/main.scss
-
-// استيراد ملف المتغيرات
-// src/styles/main.scss
-
-// استيراد ملف المتغيرات
-@import 'variables';
-
-// استخدام المتغيرات في الأنماط
-body {
-  background-color: $background-color;
-  color: $text-color;
-}
 
 .header {
   background-color: $primary-color;
@@ -139,10 +120,10 @@ body {
   }
 
   .activity-card {
+    @include box-shadow;
     background-color: $background-color;
     border: none;
     border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
     overflow: hidden;
 
@@ -202,10 +183,10 @@ body {
   }
 
   .student-card {
+    @include box-shadow;
     background-color: $background-color;
     border: none;
     border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
     overflow: hidden;
 
@@ -264,33 +245,10 @@ body {
 
 
 
-// src/styles/main.scss
 
-// استيراد ملف المتغيرات
-@import 'variables';
 
-// استخدام المتغيرات في الأنماط
-body {
-  background-color: $background-color;
-  color: $text-color;
-}
 
-.header {
-  background-color: $primary-color;
-  color: $background-color;
-}
 
-.button {
-  background-color: $accent-color;
-  color: $background-color;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-
-  &:hover {
-    background-color: lighten($accent-color, 10%);
-  }
-}
 
 // مركز المحتوى في الشريحة
 .slide-content {
@@ -316,7 +274,8 @@ body {
     background-color: $background-color;
     border: none;
     border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        @include box-shadow;
+
     transition: transform 0.3s, box-shadow 0.3s;
     overflow: hidden;
 
@@ -371,7 +330,8 @@ body {
     background-color: $background-color;
     border: none;
     border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        @include box-shadow;
+
     transition: transform 0.3s, box-shadow 0.3s;
     overflow: hidden;
     align-items: center;
@@ -460,7 +420,8 @@ body {
     background-color: $background-color;
     border: none;
     border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        @include box-shadow;
+
     transition: transform 0.3s, box-shadow 0.3s;
     overflow: hidden;
     max-width: 300px; // تقصير عرض الكرت
@@ -512,12 +473,7 @@ body {
       }
 
       .btn-primary {
-        background-color: $primary-color;
-        border: none;
-        padding: 10px 20px;
-        font-size: 1rem;
-        margin-top: 1rem;
-        cursor: pointer;
+        @include btn-styles($primary-color, $white-color);
 
         &:hover {
           background-color: darken($primary-color, 10%);
@@ -568,7 +524,8 @@ body {
     background-color: $background-color;
     padding: 1.5rem;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        @include box-shadow;
+
     margin-bottom: 2rem;
 
     h4 {
@@ -593,7 +550,7 @@ body {
     background-color: $background-color;
     padding: 1.5rem;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    @include box-shadow;
 
     h4 {
       color: $text-color;
@@ -610,12 +567,8 @@ body {
     }
 
     .btn-primary {
-      background-color: $primary-color;
-      border: none;
-      padding: 10px 20px;
-      font-size: 1rem;
-      margin-top: 1rem;
-      cursor: pointer;
+      @include btn-styles($primary-color, $white-color);
+
 
       &:hover {
         background-color: darken($primary-color, 10%);
@@ -630,7 +583,7 @@ body {
   .map-container {
     iframe {
       border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      @include box-shadow;
       width: 100%; // ضبط العرض ليكون متجاوب
       height: 660px; // ارتفاع متناسق
     }
@@ -698,14 +651,7 @@ body {
 
 // المتغيرات
 
-$highlight-color: #e67e22;
 
-// تنسيقات عامة
-body {
-  background-color: $background-color;
-  color: $text-color;
-  font-family: 'Arial', sans-serif;
-}
 
 .header {
   background-color: $primary-color;
@@ -730,7 +676,7 @@ body {
   background-color: #fff;
   padding: 2rem;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  @include box-shadow;
 
   .student-info {
     p {
@@ -748,7 +694,7 @@ body {
   background-color: #fff;
   padding: 2rem;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  @include box-shadow;
 
   .table {
     width: 100%;
@@ -756,15 +702,7 @@ body {
 
     th, td {
       padding: 0.75rem;
-      text-align: left;
-      border-bottom: 1px solid #ddd;
     }
-
-    th {
-      background-color: $primary-color;
-      color: #fff;
-    }
-
     tr:nth-child(even) {
       background-color: #f2f2f2;
     }
@@ -776,7 +714,7 @@ body {
   background-color: #fff;
   padding: 2rem;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  @include box-shadow;
 
   .tips {
     p {
@@ -790,3 +728,67 @@ body {
     }
   }
 }
+
+body.signup-page{
+  background-color:$background-color;
+  p {
+      margin-top: 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+    a {
+      color: #007bff;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  .form{
+    h2 {
+      margin-bottom: 1.5rem;
+      color: #343a40;
+      text-align: center;
+      font-size: 1.5rem;
+  }
+  } 
+}
+.form-group {
+  margin-bottom: 1rem;
+  label {
+    margin-bottom: 0.25rem;
+    display: block;
+    color: #495057;
+    font-size: 0.9rem;
+}
+input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  font-size: 0.9rem;
+}
+button {
+  @include btn-styles($primary-color, $white-color);
+  width: 100%;
+  &:hover {
+    background-color: #0056b3;
+  }
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
