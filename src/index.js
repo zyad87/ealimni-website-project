@@ -5,42 +5,54 @@ import "./assets/css/style.css";
 import './assets/js/scripts.js';
 
 import '@fortawesome/fontawesome-free/css/all.min.css';
-document.getElementById("contactalirt").style.display = "none";
+
+// إضافة الاستيراد لمكتبة popperjs
+import '@popperjs/core';
 
 document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.getElementById('contactForm');
-    
-    contactForm.addEventListener('submit', function(event) {
-      event.preventDefault();
-      
-      if (!contactForm.checkValidity()) {
-        event.stopPropagation();
-      } else {
-        document.getElementById("contactform").style.display = "none";
-        document.getElementById("contactalirt").style.display = "block";
+    const contactAlert = document.getElementById('contactalirt');
 
-      }
-      
-      contactForm.classList.add('was-validated');
-    }, false);
-  });
+    // التحقق من وجود العنصر قبل محاولة الوصول إليه
+    if (contactAlert) {
+        contactAlert.style.display = "none";
+    }
 
+    // التحقق من وجود العنصر قبل محاولة الوصول إليه
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            if (!contactForm.checkValidity()) {
+                event.stopPropagation();
+            } else {
+                const contactFormElement = document.getElementById("contactform");
+                if (contactFormElement) {
+                    contactFormElement.style.display = "none";
+                }
+                if (contactAlert) {
+                    contactAlert.style.display = "block";
+                }
+            }
+            
+            contactForm.classList.add('was-validated');
+        }, false);
+    }
 
-  // تحميل ملفات CSS بناءً على الصفحة
-document.addEventListener("DOMContentLoaded", function() {
+    // تحميل ملفات CSS بناءً على الصفحة
+    const forms = document.querySelectorAll('.needs-validation');
+    Array.prototype.slice.call(forms).forEach(function(form) {
+        form.addEventListener('submit', function(event) {
+            if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+        }, false);
+    });
 
-
-  // التحقق من صحة النموذج عند الإرسال
-  const forms = document.querySelectorAll('.needs-validation');
-  Array.prototype.slice.call(forms).forEach(function(form) {
-      form.addEventListener('submit', function(event) {
-          if (!form.checkValidity()) {
-              event.preventDefault();
-              event.stopPropagation();
-          }
-          form.classList.add('was-validated');
-      }, false);
-  });
+    const fullYearElement = document.getElementById('fullYear');
+    if (fullYearElement) {
+        fullYearElement.innerHTML = new Date().getFullYear();
+    }
 });
-
-  document.getElementById('fullYear').innerHTML = new Date().getFullYear();
